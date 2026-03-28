@@ -11,14 +11,18 @@
         :root {
             --content-width: 62rem;
             --border-radius: 3px;
+            --color-text: black;
+            --color-terminal: #333;
+            --color-background: white;
         }
 
         body {
             font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: #fff;
+            background-color: var(--color-background);
             font-optical-sizing: auto;
             margin: 3rem 1rem;
-            font-family: 1.2rem;
+            font-size: 1.2rem;
+            color: var(--color-text);
         }
 
         h1 {
@@ -29,7 +33,7 @@
         main {
             max-width: var(--content-width);
             margin: auto;
-            border: 1px solid black;
+            border: 1px solid var(--color-text);
             padding: 2rem;
         }
 
@@ -63,7 +67,7 @@
 
         footer {
             margin-top: 2rem;
-            border-top: 1px solid black;
+            border-top: 1px solid var(--color-text);
             font-size: 0.9rem;
         }
 
@@ -76,11 +80,16 @@
             padding: 0.5rem;
         }
 
+        li::marker {
+            font-size: 1.5rem;
+            color: #999;
+        }
+
         pre {
             margin: 0.2rem 0;
             padding: 0.2rem;
-            color: white;
-            background-color: #333;
+            color: var(--color-background);
+            background-color: var(--color-terminal);
             border-radius: var(--border-radius);
         }
 
@@ -88,6 +97,7 @@
             display: flex;
             flex-direction: row;
             gap: 0.5rem;
+            align-items: center;
         }
 
         .row>p {
@@ -95,15 +105,55 @@
             flex-grow: 10;
         }
 
-        li::marker {
-            font-size: 1.5rem;
-            color: #999;
-        }
-
         #none {
             text-align: center;
             color: #666;
             font-style: italic;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                margin: 0.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 0.5rem;
+            }
+
+            ol {
+                padding-left: 1rem;
+            }
+
+            li::marker {
+                font-size: 1rem;
+                color: #999;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            body {
+                margin: 0;
+            }
+
+            main {
+                border: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text: white;
+                --color-background: #111;
+                --color-terminal: #000;
+            }
+
+            pre {
+                color: white;
+            }
         }
     </style>
 </head>
