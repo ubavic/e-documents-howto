@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodič za korišćenje elektronskih dokumenata</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --content-width: 62rem;
+            --border-radius: 3px;
+        }
+
+        body {
+            font-family: "Raleway", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            font-optical-sizing: auto;
+            margin: 3rem 1rem;
+            font-family: 1.2rem;
+        }
+
+        h1 {
+            text-align: center;
+            text-justify: distribute;
+        }
+
+        main {
+            max-width: var(--content-width);
+            margin: auto;
+            border: 1px solid black;
+            padding: 2rem;
+        }
+
+        a,
+        a:visited {
+            color: #155fb3;
+        }
+
+        a[download] {
+            display: block;
+            background-color: #155fb3;
+            padding: 0.5rem;
+            color: white;
+            background-color: darkgreen;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+        }
+
+        a[download]:hover {
+            background-color: #098209;
+        }
+
+        form {
+            margin: 3rem 0;
+        }
+
+        article {
+            display: none;
+        }
+
+        footer {
+            margin-top: 2rem;
+            border-top: 1px solid black;
+            font-size: 0.9rem;
+        }
+
+        ol {
+            padding-left: 2.5rem;
+        }
+
+        li {
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+
+        pre {
+            margin: 0.2rem 0;
+            padding: 0.2rem;
+            color: white;
+            background-color: #333;
+            border-radius: var(--border-radius);
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .row>p {
+            margin: 0;
+            flex-grow: 10;
+        }
+
+        li::marker {
+            font-size: 1.5rem;
+            color: #999;
+        }
+
+        #none {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Vodič za korišćenje elektronskih dokumenata u Srbiji korišćenjem programa otvorenog koda</h1>
+
+        <form>
+            <label for="usage">Želim da</label>
+            <select name="usage" id="usage" onchange="onChange()">
+                <option value="read-id" selected="selected">očitam ličnu kartu</option>
+                <option value="read-vc">očitam saobraćajnu dozvolu</option>
+                <option value="read-mc">očitam zdravstvenu knjižicu</option>
+            </select>
+            <label for="os"> na sistemu</label>
+            <select name="os" id="os" onchange="onChange()">
+                <optgroup label="mac OS">
+                    <option value="mac-arm">Mac ARM (M1, M2, M3...)</option>
+                    <option value="mac-intel">Mac Intel</option>
+                </optgroup>
+                <optgroup label="Linux">
+                    <option value="linux-debian">Debian/Ubuntu/Mint</option>
+                    <option value="linux-arch">Arch</option>
+                </optgroup>
+                <option value="windows" selected="selected">Windows</option>
+            </select>
+            .
+        </form>
+
+        <article id="read-id-mac-arm">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za ARM macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.arm"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                    čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-id-mac-intel">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Intel macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.intel"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                    čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-vc-mac-arm">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za ARM macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.arm"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite saobraćajnu dozvolu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-vc-mac-intel">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Intel macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.intel"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite saobraćajnu dozvolu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-mc-mac-arm">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za ARM macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.arm"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite zdravstvenu knjižicu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+                <li>
+                    Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica overena.
+                    Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
+                    kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
+                    automatski preuzima pri čitanju dokumenta.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-mc-mac-intel">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Intel macOS sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.intel"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije verifikovan.
+                    Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa
+                    leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                    Baš Čelik programa.
+                </li>
+                <li>
+                    Pokrenite ponovo Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite zdravstvenu knjižicu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+                <li>
+                    Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica overena.
+                    Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
+                    kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
+                    automatski preuzima pri čitanju dokumenta.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-id-linux-debian">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Linux sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.linux.deb"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Instalirajte preuzeti <em>deb</em> paket. To možete učiniti tako što otvorite terminal u
+                    istom direktorijumu gde je i datoteka preuzeta i pokrenete
+                    <pre>sudo apt install ./bas-celik.linux.deb</pre>
+                </li>
+                <li>
+                    Pokrenite instalirani program klikom na ikonicu.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                    čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-id-linux-arch">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    Instalirajte Baš Čelik iz AUR repozitorijuma <a
+                        href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
+                    Alternativno, preuzmite Baš Čelik za Linux sa <a
+                        href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
+                </li>
+                <li>
+                    Pokrenite instalirani program kroz novi terminal:
+                    <pre>bas-celik</pre>
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                    čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-vc-linux-debian">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Linux sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.linux.deb"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Instalirajte preuzeti <em>deb</em> paket. To možete učiniti tako što otvorite terminal u
+                    istom direktorijumu gde je i datoteka preuzeta i pokrenete
+                    <pre>sudo apt install ./bas-celik.linux.deb</pre>
+                </li>
+                <li>
+                    Pokrenite instalirani program klikom na ikonicu.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite saobraćajnu dozvolu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-vc-linux-arch">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    Instalirajte Baš Čelik iz AUR repozitorijuma <a
+                        href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
+                    Alternativno, preuzmite Baš Čelik za Linux sa <a
+                        href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
+                </li>
+                <li>
+                    Pokrenite instalirani program kroz novi terminal:
+                    <pre>bas-celik</pre>
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite saobraćajnu dozvolu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-mc-linux-debian">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Linux sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane.
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.linux.deb"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Instalirajte preuzeti <em>deb</em> paket. To možete učiniti tako što otvorite terminal u
+                    istom direktorijumu gde je i datoteka preuzeta i pokrenete
+                    <pre>sudo apt install ./bas-celik.linux.deb</pre>
+                </li>
+                <li>
+                    Pokrenite instalirani program klikom na ikonicu.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite zdravstvenu knjižicu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+                <li>
+                    Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica overena.
+                    Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
+                    kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
+                    automatski preuzima pri čitanju dokumenta.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-mc-linux-arch">
+            <ol>
+                <li>
+                    Instalirajte drajvere za pametne kartice pomoću komande
+                    <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                </li>
+                <li>
+                    Omogućite PCSC servis tako što ćete u terminalu pokrenuti
+                    <pre>sudo systemctl enable pcscd.socket</pre>
+                    a zatim
+                    <pre>sudo systemctl start pcscd.socket</pre>
+                </li>
+                <li>
+                    Instalirajte Baš Čelik iz AUR repozitorijuma <a
+                        href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
+                    Alternativno, preuzmite Baš Čelik za Linux sa <a
+                        href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
+                </li>
+                <li>
+                    Pokrenite instalirani program kroz novi terminal:
+                    <pre>bas-celik</pre>
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite zdravstvenu knjižicu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+                <li>
+                    Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica overena.
+                    Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
+                    kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
+                    automatski preuzima pri čitanju dokumenta.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-id-windows">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Windows sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na dostupnom
+                            mestu (npr. na Desktopu).
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/windows.amd64.exe"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
+                    kliknite na <em>Run anyway</em>.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                    čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-vc-windows">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Windows sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na dostupnom
+                            mestu (npr. na Desktopu).
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/windows.amd64.exe"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
+                    kliknite na <em>Run anyway</em>.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite saobraćajnu dozvolu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+            </ol>
+        </article>
+
+        <article id="read-mc-windows">
+            <ol>
+                <li>
+                    <div class="row">
+                        <p>Preuzmite Baš Čelik za Windows sa <a
+                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                            stranice ili pritiskom da dugme sa desne strane. Preuzetu datoteku sačuvajte na dostupnom
+                            mestu (npr. na Desktopu).
+                        </p>
+                        <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/windows.amd64.exe"
+                            download>Preuzmi</a>
+                    </div>
+                </li>
+                <li>
+                    Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
+                    kliknite na <em>Run anyway</em>.
+                </li>
+                <li>
+                    Povežite čitač kartica za računar, i ubacite zdravstvenu knjižicu u čitač. Dokument će se pročitati,
+                    nakon čega pritiskom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                    aplikacije.
+                </li>
+                <li>
+                    Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica overena.
+                    Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
+                    kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
+                    automatski preuzima pri čitanju dokumenta.
+                </li>
+            </ol>
+        </article>
+
+        <article id="none">
+            Traženo uputstvo nije pronađeno. Pomozite u pisanju uputstva preko <a
+                href="https://github.com/ubavic/e-documents-howto">Github-a</a>.
+        </article>
+
+        <footer>
+            <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> nisu zvanični programi Republike Srbije, već su
+                razvijeni od strane nezavisnih pojedinaca. Oba programa
+                su testirana na mnogim uređajima i dokumentima, ali ne postoji nikakva garancija da će ispravno
+                funkcionisati sa svakim dokumentom.</p>
+
+            <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> su otvorenog koda, i njihov izvorni kod se može
+                pregledati i preuzeti kroz Github repozitorijume <a
+                    href="https://github.com/ubavic/bas-celik">bas-celik</a> i <a
+                    href="https://github.com/ubavic/srb-id-pkcs11">srb-id-pkcs11</a>. Programi su u potpunosti
+                besplatni.
+                Originalan autor programa je <a href="https://ubavic.rs/">Nikola Ubavić</a>. Osim Nikole, razvoju su
+                doprineli i mnogi drugi korisnici, menjajući kod, testirajući programe, i dajući korisne sugestije.</p>
+
+            <p>Kod ovog vodiča je dostupan na <a href="https://github.com/ubavic/e-documents-howto">Github-a</a>. Sve
+                uočene greške možete poslati na <em>bas-celik@ubavic.rs</em>.</p>
+        </footer>
+
+    </main>
+
+</body>
+
+<script>
+    const onChange = () => {
+        const usage = document.getElementById("usage").value;
+        const os = document.getElementById("os").value;
+
+        const articles = document.getElementsByTagName("article");
+        for (const a of articles) {
+            a.style.display = "none";
+        }
+
+        const article = document.getElementById(`${usage}-${os}`);
+        if (article == null) {
+            const article = document.getElementById(`none`);
+            article.style.display = "block";
+            return;
+        }
+
+        article.style.display = "block";
+    }
+
+    window.onload = onChange
+</script>
+
+</html>
