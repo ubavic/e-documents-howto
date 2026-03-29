@@ -67,8 +67,8 @@
         }
 
         footer {
-            margin-top: 2rem;
-            border-top: 1px solid var(--color-text);
+            max-width: var(--content-width);
+            margin: auto;
             font-size: 0.9rem;
         }
 
@@ -143,6 +143,10 @@
 
             main {
                 border: none;
+            }
+
+            footer {
+                padding: 0.5rem;
             }
         }
     </style>
@@ -656,26 +660,24 @@
             Traženo uputstvo nije pronađeno. Pomozite u pisanju uputstva preko <a
                 href="https://github.com/ubavic/e-documents-howto">Github-a</a>.
         </article>
-
-        <footer>
-            <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> nisu zvanični programi Republike Srbije, već su
-                razvijeni od strane nezavisnih pojedinaca. Oba programa
-                su testirana na mnogim uređajima i dokumentima, ali ne postoji nikakva garancija da će ispravno
-                funkcionisati sa svakim dokumentom.</p>
-
-            <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> su otvorenog koda, i njihov izvorni kod se može
-                pregledati i preuzeti kroz Github repozitorijume <a
-                    href="https://github.com/ubavic/bas-celik">bas-celik</a> i <a
-                    href="https://github.com/ubavic/srb-id-pkcs11">srb-id-pkcs11</a>. Programi su u potpunosti
-                besplatni.
-                Originalan autor programa je <a href="https://ubavic.rs/">Nikola Ubavić</a>. Osim Nikole, razvoju su
-                doprineli i mnogi drugi korisnici, menjajući kod, testirajući programe, i dajući korisne sugestije.</p>
-
-            <p>Kod ovog vodiča je dostupan na <a href="https://github.com/ubavic/e-documents-howto">Github-a</a>. Sve
-                uočene greške možete poslati na <em>bas-celik@ubavic.rs</em>.</p>
-        </footer>
-
     </main>
+
+    <footer>
+        <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> nisu zvanični programi Republike Srbije, već su
+            razvijeni od strane nezavisnih pojedinaca. Oba programa
+            su testirana na mnogim uređajima i dokumentima, ali ne postoji nikakva garancija da će ispravno
+            funkcionisati sa svakim dokumentom.</p>
+
+        <p>Programi <em>Baš Čelik</em> i <em>srb-id-pkcs11</em> su otvorenog koda, i njihov izvorni kod se može
+            pregledati i preuzeti kroz Github repozitorijume <a href="https://github.com/ubavic/bas-celik">bas-celik</a>
+            i <a href="https://github.com/ubavic/srb-id-pkcs11">srb-id-pkcs11</a>. Programi su u potpunosti
+            besplatni.
+            Originalan autor programa je <a href="https://ubavic.rs/">Nikola Ubavić</a>. Osim Nikole, razvoju su
+            doprineli i mnogi drugi korisnici, menjajući kod, testirajući programe, i dajući korisne sugestije.</p>
+
+        <p>Kôd ovog vodiča je dostupan na <a href="https://github.com/ubavic/e-documents-howto">Github-a</a>. Sve
+            uočene greške možete prijaviti na <em>bas-celik@ubavic.rs</em>.</p>
+    </footer>
 
 </body>
 
