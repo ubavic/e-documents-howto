@@ -1260,9 +1260,29 @@
 </body>
 
 <script>
+    const setSelectValue = (id, value) => {
+        if (value == null) {
+            return;
+        }
+
+        const select = document.getElementById(id);
+        const option = Array.from(select.options).find((option) => option.value === value);
+        if (option != null) {
+            select.value = value;
+        }
+    }
+
+    const updateUrl = (usage, os) => {
+        const url = new URL(window.location);
+        url.searchParams.set("usage", usage);
+        url.searchParams.set("os", os);
+        window.history.replaceState(null, "", url);
+    }
+
     const onChange = () => {
         const usage = document.getElementById("usage").value;
         const os = document.getElementById("os").value;
+        updateUrl(usage, os);
 
         const articles = document.getElementsByTagName("article");
         for (const a of articles) {
@@ -1279,7 +1299,12 @@
         article.style.display = "block";
     }
 
-    window.onload = onChange
+    window.onload = () => {
+        const params = new URLSearchParams(window.location.search);
+        setSelectValue("usage", params.get("usage"));
+        setSelectValue("os", params.get("os"));
+        onChange();
+    }
 </script>
 
 </html>
