@@ -96,6 +96,11 @@
             overflow-x: scroll;
         }
 
+        img {
+            max-width: 100%;
+            border: 1px solid var(--color-text);
+        }
+
         .row {
             display: flex;
             flex-direction: row;
@@ -179,6 +184,7 @@
                 <option value="read-mc">očitam zdravstvenu knjižicu</option>
                 <option value="login-euprava-firefox">se ulogujem na eUpravu koristeći Firefox</option>
                 <option value="login-euprava-chrome">se ulogujem na eUpravu koristeći Chrome</option>
+                <option value="login-eporezi">se ulogujem na ePoreze</option>
             </select>
             <label for="os"> na sistemu</label>
             <select name="os" id="os" onchange="onChange()">
@@ -576,6 +582,85 @@
                         što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite sertifikat označen
                         sa
                         <em>Auth</em>. Nakon izbora sertifikata, pasle par sekundi otvoriće vam se portal.
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="login-eporezi-mac-intel">
+            <section class="prerequisites">
+                <header>Preduslovi</header>
+                <ol>
+                    <li>
+                        Da biste mogli da se ulogujete na ePoreze sa ličnom kartom, potrebno je da posedujete
+                        kvalifikovani elektronski sertifikat. Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
+                        MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
+                            href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>. Uz sertifikat dobijate i
+                        četvorocifreni PIN, koji morate da znate da biste koristili sertifikat.
+                    </li>
+                </ol>
+            </section>
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol start="2">
+                    <li>
+                        <div class="row">
+                            <p>Preuzmite Baš Čelik za Intel macOS sa <a
+                                    href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                                stranice ili klikom na dugme sa desne strane. Preuzetu datoteku sačuvajte na desktopu.
+                            </p>
+                            <a href="https://github.com/ubavic/bas-celik/releases/download/v2.5.0/bas-celik.macos.intel"
+                                download>Preuzmi</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <p>Preuzmite modul srb-id-pkcs11 za Intel macOS sa <a
+                                    href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
+                                stranice ili klikom na dugme sa desne strane. Preuzetu datoteku sačuvajte na trajnoj
+                                lokaciji.
+                            </p>
+                            <a href="https://github.com/ubavic/srb-id-pkcs11/releases/download/v0.4.2/libsrb-id-pkcs11.x64.0.4.2.dylib"
+                                download>Preuzmi</a>
+                        </div>
+                    </li>
+                    <li>
+                        Otvorite Baš Čelik.
+                        <ul>
+                            <li>Ako se pojavi upozorenje da program nije
+                                verifikovan, zatvorite upozorenje i otvorite <em>System Settings</em>.
+                                U sekciji <em>Privacy & Security</em> sa leve strane, otvorite
+                                <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                                Baš Čelik programa.
+                            </li>
+                        </ul>
+                        U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja. U podešavanjima,
+                        otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>
+                    </li>
+                </ol>
+            </section>
+            <section class="usage">
+                <header>Upotreba</header>
+                <ol start="5">
+                    <li>
+                        Ponovite prethodni korak, ovaj put ne bi trebalo da imate bilo kakva
+                        upozorenja.
+                    </li>
+                    <li>
+                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
+                    </li>
+                    <li>
+                        U pretraživaču otvorite <a
+                            href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
+                        gornje
+                        desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
+                            sertifikat</em>. Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
+                        PIN-a.
+                        Nakon
+                        što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite sertifikat
+                        označen
+                        sa
+                        <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
                     </li>
                 </ol>
             </section>
