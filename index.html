@@ -122,6 +122,10 @@
             padding: 0.5rem 1rem 0 1rem;
         }
 
+        figure {
+            text-align: center;
+        }
+
         @media screen and (max-width: 700px) {
             body {
                 margin: 0.5rem;
@@ -177,10 +181,7 @@
             </select>
             <label for="os"> na sistemu</label>
             <select name="os" id="os" onchange="onChange()">
-                <optgroup label="mac OS">
-                    <option value="mac-arm">Mac ARM (M1, M2, M3...)</option>
-                    <option value="mac-intel">Mac Intel</option>
-                </optgroup>
+                <option value="mac">Mac</option>
                 <optgroup label="Linux">
                     <option value="linux-debian">Debian/Ubuntu/Mint</option>
                     <option value="linux-arch">Arch</option>
@@ -190,23 +191,31 @@
             .
         </form>
 
-        <article id="read-id-mac-arm">
+        <article id="read-id-mac">
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za ARM macOS sa <a
+                        Preuzmite Baš Čelik za macOS sa <a
                             href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
+                        desktopu.
                     </li>
                     <li>
                         Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
                         verifikovan.
+
+                        <figure>
+                            <img src="./img/macOS-error.png" style="max-height: 300px;">
+                        </figure>
+
                         Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        sa
-                        leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored
-                        imena
-                        Baš Čelik programa.
+                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
+                        kod imena Baš Čelik programa.
+
+                        <figure>
+                            <img src="./img/macOS-privacy-and-security.png">
+                        </figure>
                     </li>
                 </ol>
             </section>
@@ -228,61 +237,31 @@
             </section>
         </article>
 
-        <article id="read-id-mac-intel">
+        <article id="read-vc-mac">
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za Intel macOS sa <a
+                        Preuzmite Baš Čelik za macOS sa <a
                             href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
+                        desktopu.
                     </li>
                     <li>
                         Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
                         verifikovan.
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        sa
-                        leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored
-                        imena
-                        Baš Čelik programa.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="3">
-                    <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
-                        čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
 
                         <figure>
-                            <img src="./img/id.png">
+                            <img src="./img/macOS-error.png" style="max-height: 300px;">
                         </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
 
-        <article id="read-vc-mac-arm">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Preuzmite Baš Čelik za ARM macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
-                    </li>
-                    <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
                         Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        sa
-                        leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored
-                        imena
-                        Baš Čelik programa.
+                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
+                        kod imena Baš Čelik programa.
+
+                        <figure>
+                            <img src="./img/macOS-privacy-and-security.png">
+                        </figure>
                     </li>
                 </ol>
             </section>
@@ -306,62 +285,31 @@
             </section>
         </article>
 
-        <article id="read-vc-mac-intel">
+        <article id="read-mc-mac">
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za Intel macOS sa <a
+                        Preuzmite Baš Čelik za macOS sa <a
                             href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
-
-                    </li>
-                    <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan. Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy &
-                            Security</em>
-                        sa leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
-                        pored imena Baš Čelik programa.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="3">
-                    <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
-                        pročitati,
-                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
-                        aplikacije.
-
-                        <figure>
-                            <img src="./img/vc.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-mc-mac-arm">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Preuzmite Baš Čelik za ARM macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
+                        desktopu.
                     </li>
                     <li>
                         Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
                         verifikovan.
+
+                        <figure>
+                            <img src="./img/macOS-error.png" style="max-height: 300px;">
+                        </figure>
+
                         Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        sa
-                        leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored
-                        imena
-                        Baš Čelik programa.
+                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
+                        kod imena Baš Čelik programa.
+
+                        <figure>
+                            <img src="./img/macOS-privacy-and-security.png">
+                        </figure>
                     </li>
                 </ol>
             </section>
@@ -392,54 +340,7 @@
             </section>
         </article>
 
-        <article id="read-mc-mac-intel">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Preuzmite Baš Čelik za Intel macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
-                    </li>
-                    <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        sa
-                        leve strane, otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored
-                        imena
-                        Baš Čelik programa.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="3">
-                    <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite zdravstvenu knjižicu u čitač. Dokument će se
-                        pročitati,
-                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
-                        aplikacije.
-
-                        <figure>
-                            <img src="./img/mc.png">
-                        </figure>
-                    </li>
-                    <li>
-                        Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica
-                        overena.
-                        Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
-                        kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
-                        automatski preuzima pri čitanju dokumenta.
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="login-euprava-firefox-mac-arm">
+        <article id="login-euprava-firefox-mac">
             <section class="prerequisites">
                 <header>Preduslovi</header>
                 <ol>
@@ -457,9 +358,9 @@
             <section class="installation">
                 <header>Instalacija</header>
                 <ol start="2">
-                    <li>Preuzmite modul srb-id-pkcs11 za ARM macOS sa <a
+                    <li>Preuzmite modul srb-id-pkcs11 za macOS sa <a
                             href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na trajnoj
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na trajnoj
                         lokaciji.
                     </li>
                     <li>
@@ -505,76 +406,7 @@
             </section>
         </article>
 
-        <article id="login-euprava-firefox-mac-intel">
-            <section class="prerequisites">
-                <header>Preduslovi</header>
-                <ol>
-                    <li>
-                        Da biste mogli da se ulogujete u eUpravu sa ličnom kartom, potrebno je da posedujete
-                        kvalifikovani
-                        elektronski sertifikat. Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
-                        MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
-                            href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>.
-                    </li>
-                    <li>Uz sertifikat se dobija PIN (četvorocifreni broj). Ovaj PIN morate znati da biste
-                        koristili sertifikat.</li>
-                </ol>
-            </section>
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol start="2">
-                    <li>
-                        Preuzmite modul srb-id-pkcs11 za Intel macOS sa <a
-                            href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na trajnoj
-                        lokaciji.
-                    </li>
-                    <li>
-                        U Firefox programu otvorite podešavanja. U meniju sa leve strane odaberite <em>Privacy &
-                            Security</em>, i nađite sekciju <em>Security</em>. Otvorite <em>Security devices...</em>. U
-                        dobijenom pregledu kliknite na <em>Load</em> i zatim postavite putanju do modula srb-id-pkcs11
-                        koji ste sačuvali. Potvrdite izbor i izađite iz podešavanja. Restartujte Firefox.
-
-                        <figure>
-                            <img src="./img/firefox-device-manager.png">
-                        </figure>
-                    </li>
-                    <li>
-                        Ako se u prethodnom koraku pojavi upozorenje da program nije verifikovan, zatvorite upozorenje i
-                        otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em> sa leve strane,
-                        otvorite
-                        <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
-                        srb-id-pkcs11 programa. Ponovite prethodni korak, ovaj put ne bi trebalo da imate bilo kakva
-                        upozorenja.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="5">
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
-                    </li>
-                    <li>
-                        U Firefox-u, otvorite <a href="https://euprava.gov.rs/">euprava.gov.rs</a>. Iz menija sa gornje
-                        desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>.
-
-                        <figure>
-                            <img src="./img/euprava.png">
-                        </figure>
-
-                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos PIN-a.
-                        Nakon
-                        što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite sertifikat označen
-                        sa
-                        <em>Auth</em>. Nakon izbora sertifikata, posle par sekundi otvoriće vam se portal.
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="login-eporezi-mac-arm">
+        <article id="login-eporezi-mac">
             <section class="prerequisites">
                 <header>Preduslovi</header>
                 <ol>
@@ -597,16 +429,17 @@
             <section class="installation">
                 <header>Instalacija</header>
                 <ol start="2">
-                    <li>Preuzmite Baš Čelik za ARM macOS sa <a
+                    <li>Preuzmite Baš Čelik za macOS sa <a
                             href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
+                        desktopu.
                     </li>
                     <li>
-                        Preuzimanje PKCS#11 modula:
+                        Preuzmite PKCS#11 modul:
                         <ul>
                             <li>
                                 Ako koristite sertifikat koji je izdao MUP, tj. ako koristite ličnu kartu,
-                                preuzmite modul srb-id-pkcs11 za ARM macOS sa <a
+                                preuzmite modul srb-id-pkcs11 za macOS sa <a
                                     href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
                                 stranice. Preuzetu datoteku sačuvajte na
                                 trajnoj lokaciji.
@@ -617,17 +450,20 @@
                         </ul>
                     </li>
                     <li>
-                        Podešavanje Baš Čelika:
+                        Podesite Baš Čelik:
                         <ul>
-                            <li>Otvorite Baš Čelik.</li>
-                            <li>Otovriće se upozorenje da program nije
+                            <li>Pokrenite Baš Čelik. Otvoriće se upozorenje da program nije
                                 verifikovan. Zatvorite upozorenje i otvorite <em>System Settings</em>.
                                 U sekciji <em>Privacy & Security</em> sa leve strane, otvorite
-                                <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
+                                <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi kod imena
                                 Baš Čelik programa.
+
+                                <figure>
+                                    <img src="./img/macOS-privacy-and-security.png">
+                                </figure>
                             </li>
-                            <li>Otvorite ponovo Baš Čelik. Upozorenje ne bi trebalo da se sada pojavljuje.</li>
                             <li>
+                                Otvorite ponovo Baš Čelik
                                 U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja. U
                                 podešavanjima,
                                 otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>. Za tip
@@ -651,103 +487,15 @@
                     <li>
                         U pretraživaču otvorite <a
                             href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
-                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>. Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
-                        PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
-                        sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
-                    </li>
-                    <li>
-                        Baš Čelik radi u Smartbox ili eDocuments režimu. Ako želite da očitate elektronska
-                        dokumenta (lična karta, zdravstvena knjižica, vozačka dozvola), kroz podešavanja Baš Čelika
-                        isključite SmartBox mod i restartujte aplikaciju. Kada ponovo budete učitavali Smartbox
-                        mod, dovoljno je samo da ga aktivirate na istom mestu, sva ostala podešavanja (putanje
-                        do modula) biće sačuvana.
-                    </li>
-                </ol>
-            </section>
-        </article>
+                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Pristup putem
+                            Kvalifikovanog elektronskog
+                            sertifikata (Smartbox)</em>.
 
-        <article id="login-eporezi-mac-intel">
-            <section class="prerequisites">
-                <header>Preduslovi</header>
-                <ol>
-                    <li>
-                        Da biste mogli da se ulogujete na ePoreze, potrebno je da posedujete
-                        kvalifikovani elektronski sertifikat koji je izdao jedno od sertifikacionih tela: Ministarstvo
-                        unutrašnjih poslova, Privredna
-                        komora Srbije, Pošta, Halcom
-                        ili E-Smart Systems.
-                        <ul>
-                            <li> Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
-                                MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
-                                    href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>.</li>
-                        </ul>
-                    </li>
-                    <li>Uz svaki sertifikat se dobija PIN (najčešće četvorocifreni broj). Ovaj PIN morate znati da biste
-                        koristili sertifikat.</li>
-                </ol>
-            </section>
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol start="2">
-                    <li>
-                        Preuzmite Baš Čelik za Intel macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na desktopu.
-                    </li>
-                    <li>
-                        Preuzimanje PKCS#11 modula:
-                        <ul>
-                            <li>
-                                Ako koristite sertifikat koji je izdao MUP, tj. ako koristite ličnu kartu,
-                                preuzmite modul srb-id-pkcs11 za Intel macOS sa <a
-                                    href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                                stranice. Preuzetu datoteku sačuvajte na
-                                trajnoj lokaciji.
+                        <figure>
+                            <img src="./img/ePorezi-login.png">
+                        </figure>
 
-                            </li>
-                            <li>Ako koristite sertifikat koji su izdali Pošta, Halcom
-                                ili E-Smart Systems, pročitajte tehničku dokumentaciju tih sertifikacionih tela da bi
-                                ste se informisali kako da instalirate PKCS#11 modul.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Podešavanje Baš Čelika:
-                        <ul>
-                            <li>Otvorite Baš Čelik.</li>
-                            <li>Otovriće se upozorenje da program nije
-                                verifikovan. Zatvorite upozorenje i otvorite <em>System Settings</em>.
-                                U sekciji <em>Privacy & Security</em> sa leve strane, otvorite
-                                <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi pored imena
-                                Baš Čelik programa.
-                            </li>
-                            <li>Otvorite ponovo Baš Čelik. Upozorenje ne bi trebalo da se sada pojavljuje.</li>
-                            <li>
-                                U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja. U
-                                podešavanjima,
-                                otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>. Za tip
-                                sertifikata koji ćete koristiti, popunite putanju do PKCS#11 modula. Neke od putanja se
-                                automatski popunjavaju. Ako te vrste sertifikata ne koristite, putanje obrišite.
-                            </li>
-                        </ul>
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="5">
-                    <li>
-                        Otvorite Baš Čelik. Prikazaće se lista učitanih PKCS#11 modula. Ako modul koji želite da
-                        koristite nije na listi, vratite se na prethodni korak.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
-                    </li>
-                    <li>
-                        U pretraživaču otvorite <a
-                            href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
-                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>. Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
+                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
                         PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
                         sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
                     </li>
@@ -1388,8 +1136,14 @@
                     <li>
                         U pretraživaču otvorite <a
                             href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
-                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>. Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
+                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Pristup putem
+                            Kvalifikovanog elektronskog sertifikata (Smartbox)</em>.
+
+                        <figure>
+                            <img src="./img/ePorezi-login.png">
+                        </figure>
+
+                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
                         PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
                         sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
                     </li>
@@ -1477,8 +1231,15 @@
                     <li>
                         U pretraživaču otvorite <a
                             href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
-                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>. Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
+                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Pristup putem
+                            Kvalifikovanog elektronskog
+                            sertifikata (Smartbox)</em>.
+
+                        <figure>
+                            <img src="./img/ePorezi-login.png">
+                        </figure>
+                       
+                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
                         PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
                         sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
                     </li>
@@ -1529,10 +1290,10 @@
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                       Preuzmite Baš Čelik za Windows sa <a
-                                    href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                                stranice. Preuzetu datoteku sačuvajte na dostupnom
-                                mestu (npr. na Desktopu).
+                        Preuzmite Baš Čelik za Windows sa <a
+                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                        stranice. Preuzetu datoteku sačuvajte na dostupnom
+                        mestu (npr. na Desktopu).
                     </li>
                 </ol>
             </section>
@@ -1677,8 +1438,13 @@
 
     window.onload = () => {
         const params = new URLSearchParams(window.location.search);
+        let os = params.get("os");
+        if (os == "mac-arm" || "mac-intel") {
+            os = "mac"
+        }
+
         setSelectValue("usage", params.get("usage"));
-        setSelectValue("os", params.get("os"));
+        setSelectValue("os", os);
         onChange();
     }
 </script>
