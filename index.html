@@ -132,6 +132,7 @@
         }
 
         figure img {
+            max-width: 90%;
             margin: 0;
         }
 
@@ -159,6 +160,10 @@
             li::marker {
                 font-size: 1rem;
                 color: #999;
+            }
+
+            figure img {
+                max-width: 100%;
             }
         }
 
@@ -192,20 +197,17 @@
                 <option value="login-euprava-firefox">se ulogujem na eUpravu koristeći Firefox</option>
                 <option value="login-euprava-chrome">se ulogujem na eUpravu koristeći Chrome</option>
                 <option value="login-eporezi">se ulogujem na ePoreze</option>
+                <option value="install-bas-celik">instaliram Baš Čelik</option>
             </select>
             <label for="os"> na sistemu</label>
             <select name="os" id="os" onchange="onChange()">
+                <option value="linux" selected="selected">Linux</option>
                 <option value="mac">Mac</option>
-                <optgroup label="Linux">
-                    <option value="linux-debian">Debian/Ubuntu/Mint</option>
-                    <option value="linux-arch">Arch</option>
-                </optgroup>
-                <option value="windows" selected="selected">Windows</option>
+                <option value="windows">Windows</option>
             </select>
-            .
         </form>
 
-        <article id="read-id-mac">
+        <article id="install-bas-celik-mac">
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
@@ -217,30 +219,45 @@
                     </li>
                     <li>
                         Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
+                        verifikovan. Zatvorite upozorenje klikom na <em>OK</em>.
 
                         <figure>
-                            <img src="./img/macOS-error.png" style="max-height: 300px;">
+                            <img src="./img/macOS-error.png">
                         </figure>
-
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
+                    </li>
+                    <li>
+                        Otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
                         otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
                         kod imena Baš Čelik programa.
 
                         <figure>
                             <img src="./img/macOS-privacy-and-security.png">
                         </figure>
+
+                    <li>Baš Čelik je sada instaliran i spreman za korišćenje.</li>
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="read-id-mac">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na macOs-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="3">
+                <ol start="2">
                     <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                        Pokrenite Baš Čelik program a zatim ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
                         čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
 
                         <figure>
@@ -256,37 +273,19 @@
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
-                        desktopu.
-                    </li>
-                    <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
-
-                        <figure>
-                            <img src="./img/macOS-error.png" style="max-height: 300px;">
-                        </figure>
-
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
-                        kod imena Baš Čelik programa.
-
-                        <figure>
-                            <img src="./img/macOS-privacy-and-security.png">
-                        </figure>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na macOs-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="3">
+                <ol start="2">
                     <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
+                        Pokrenite Baš Čelik program a zatim ubacite saobraćajnu dozvolu u čitač. Dokument će se
                         pročitati,
                         nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
                         aplikacije.
@@ -304,37 +303,19 @@
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
-                        desktopu.
-                    </li>
-                    <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
-
-                        <figure>
-                            <img src="./img/macOS-error.png" style="max-height: 300px;">
-                        </figure>
-
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
-                        kod imena Baš Čelik programa.
-
-                        <figure>
-                            <img src="./img/macOS-privacy-and-security.png">
-                        </figure>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na macOs-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="3">
+                <ol start="2">
                     <li>
-                        Ponovo pokrenite Baš Čelik program. Sada bi program trebalo da se otvori bez problema.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite zdravstvenu knjižicu u čitač. Dokument će se
+                        Pokrenite Baš Čelik program, zatim ubacite zdravstvenu knjižicu u čitač. Dokument će se
                         pročitati,
                         nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
                         aplikacije.
@@ -344,7 +325,8 @@
                         </figure>
                     </li>
                     <li>
-                        Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica
+                        Pre generisanja PDF dokumenta, klikom na dugme <em>Ažuriraj</em> možete preuzeti podatak do kada
+                        je kartica
                         overena.
                         Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
                         kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
@@ -355,45 +337,47 @@
         </article>
 
         <article id="change-pin-mac">
-            <section class="installation">
-                <header>Instalacija</header>
+            <section class="prerequisites">
+                <header>Preduslovi</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
-                        desktopu.
+                        Da biste mogli da promenite PIN morate znati postojeći PIN. PIN za ličnu kartu se dobija
+                        prilikom izdavanja lične karte u propratnoj dokumentaciji.
                     </li>
+                    <li>Unošenjem pogrešnog PIN-a tri puta za redom kartica će biti blokirana. Samo MUP može da
+                        odblokira
+                        karticu. Proces deblokade je besplatan.</li>
+                </ol>
+            </section>
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol start="3">
                     <li>
-                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
-                        verifikovan.
-
-                        <figure>
-                            <img src="./img/macOS-error.png" style="max-height: 300px;">
-                        </figure>
-
-                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
-                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
-                        kod imena Baš Čelik programa.
-
-                        <figure>
-                            <img src="./img/macOS-privacy-and-security.png">
-                        </figure>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na macOs-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="3">
+                <ol start="4">
+                    <li>Povežite čitač kartica za računar.</li>
                     <li>
-                        Pokrenite Baš Čelik program. Povežite čitač kartica za računar i ubacite ličnu kartu u
+                        Pokrenite Baš Čelik program, a zatim ubacite ličnu kartu u
                         čitač. Nakon što se dokument pročita,
                         kliknite na dugme <em>Kriptografski elementi</em> ispod portreta.
 
-                        Na novom prikazu, kliknite na dugme <em>Promeni PIN</em> u donjem desnom uglu. U formu unesite postojeći i novi pin i kliknite na <em>Promeni</em>.
+                        <figure>
+                            <img src="./img/id.png">
+                        </figure>
+                    </li>
+
+                    <li>
+                        Na novom prikazu, kliknite na dugme <em>Promeni PIN</em> u donjem desnom uglu. U formu unesite
+                        postojeći i novi pin i kliknite na <em>Promeni</em>.
 
                         <figure>
-                            <img src="./img/change-pin.png" style="max-height: 300px;">
+                            <img src="./img/change-pin.png">
                         </figure>
                     </li>
                 </ol>
@@ -417,7 +401,7 @@
             </section>
             <section class="installation">
                 <header>Instalacija</header>
-                <ol start="2">
+                <ol start="3">
                     <li>Preuzmite modul srb-id-pkcs11 za macOS sa <a
                             href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
                         stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na trajnoj
@@ -445,7 +429,7 @@
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="5">
+                <ol start="6">
                     <li>
                         Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
                     </li>
@@ -488,11 +472,10 @@
             </section>
             <section class="installation">
                 <header>Instalacija</header>
-                <ol start="2">
-                    <li>Preuzmite Baš Čelik za macOS sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
-                        desktopu.
+                <ol start="3">
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na macOs-u</a>.
                     </li>
                     <li>
                         Preuzmite PKCS#11 modul:
@@ -510,39 +493,24 @@
                         </ul>
                     </li>
                     <li>
-                        Podesite Baš Čelik:
-                        <ul>
-                            <li>Pokrenite Baš Čelik. Otvoriće se upozorenje da program nije
-                                verifikovan. Zatvorite upozorenje i otvorite <em>System Settings</em>.
-                                U sekciji <em>Privacy & Security</em> sa leve strane, otvorite
-                                <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi kod imena
-                                Baš Čelik programa.
-
-                                <figure>
-                                    <img src="./img/macOS-privacy-and-security.png">
-                                </figure>
-                            </li>
-                            <li>
-                                Otvorite ponovo Baš Čelik
-                                U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja. U
-                                podešavanjima,
-                                otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>. Za tip
-                                sertifikata koji ćete koristiti, popunite putanju do PKCS#11 modula. Neke od putanja se
-                                automatski popunjavaju. Ako te vrste sertifikata ne koristite, putanje obrišite.
-                            </li>
-                        </ul>
+                        Otvorite Baš Čelik
+                        U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja. U
+                        podešavanjima,
+                        otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>. Za tip
+                        sertifikata koji ćete koristiti, popunite putanju do PKCS#11 modula. Neke od putanja se
+                        automatski popunjavaju. Ako te vrste sertifikata ne koristite, putanje obrišite.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="5">
+                <ol start="6">
                     <li>
                         Otvorite Baš Čelik. Prikazaće se lista učitanih PKCS#11 modula. Ako modul koji želite da
                         koristite nije na listi, vratite se na prethodni korak.
 
                         <figure>
-                            <img src="./img/smartbox.png" style="max-width: 500px;">
+                            <img src="./img/smartbox.png">
                         </figure>
                     </li>
                     <li>
@@ -574,9 +542,9 @@
             </section>
         </article>
 
-        <article id="read-id-linux-debian">
+        <article id="install-bas-celik-linux">
             <section class="installation">
-                <header>Instalacija</header>
+                <header>Instalacija Debian</header>
                 <ol>
                     <li>
                         Instalirajte drajvere za pametne kartice pomoću komande
@@ -599,162 +567,13 @@
                     </li>
                 </ol>
             </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="5">
-                    <li>
-                        Pokrenite instalirani program klikom na ikonicu.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
-                        čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
-
-                        <figure>
-                            <img src="./img/id.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-id-linux-arch">
+            <hr>
             <section class="installation">
-                <header>Instalacija</header>
+                <header>Instalacija Arch</header>
                 <ol>
                     <li>
                         Instalirajte drajvere za pametne kartice pomoću komande
                         <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Instalirajte Baš Čelik iz AUR repozitorijuma <a
-                            href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
-                        Alternativno, preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="4">
-                    <li>
-                        Pokrenite instalirani program kroz novi terminal:
-                        <pre>bas-celik</pre>
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
-                        čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
-
-                        <figure>
-                            <img src="./img/id.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-vc-linux-debian">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        <p>Preuzmite Baš Čelik za Linux sa <a
-                                href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                            stranice.
-                    </li>
-                    <li>
-                        Instalirajte preuzeti <em>deb</em> paket. To možete učiniti tako što otvorite terminal u
-                        istom direktorijumu gde je i datoteka preuzeta i pokrenete
-                        <pre>sudo apt install ./bas-celik.linux.deb</pre>
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="5">
-                    <li>
-                        Pokrenite instalirani program klikom na ikonicu.
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
-                        pročitati,
-                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
-                        aplikacije.
-
-                        <figure>
-                            <img src="./img/vc.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-vc-linux-arch">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Instalirajte Baš Čelik iz AUR repozitorijuma <a
-                            href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
-                        Alternativno, preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="4">
-                    <li>
-                        Pokrenite instalirani program kroz novi terminal:
-                        <pre>bas-celik</pre>
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
-                        pročitati,
-                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
-                        aplikacije.
-
-
-                        <figure>
-                            <img src="./img/vc.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-mc-linux-debian">
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol>
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
                     </li>
                     <li>
                         Omogućite PCSC servis tako što ćete u terminalu pokrenuti
@@ -764,21 +583,96 @@
                     </li>
                     <li>
                         Preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice.
+                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
                     </li>
+                </ol>
+            </section>
+            <hr>
+            <section class="installation">
+                <header>Instalacija Arch AUR</header>
+                <ol>
                     <li>
-                        Instalirajte preuzeti <em>deb</em> paket. To možete učiniti tako što otvorite terminal u
-                        istom direktorijumu gde je i datoteka preuzeta i pokrenete
-                        <pre>sudo apt install ./bas-celik.linux.deb</pre>
+                        Instalirajte Baš Čelik iz <em>nezvaničnog</em> AUR repozitorijuma <a
+                            href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="read-id-linux">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Linux-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
-                <ol start="5">
+                <ol start="2">
                     <li>
-                        Pokrenite instalirani program klikom na ikonicu.
+                        Povežite čitač kartica za računar.
+                    </li>
+                    <li>
+                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                        čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
+
+                        <figure>
+                            <img src="./img/id.png">
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+
+        <article id="read-vc-linux">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Linux-u</a>.
+                    </li>
+                </ol>
+            </section>
+            <section class="usage">
+                <header>Upotreba</header>
+                <ol start="2">
+                    <li>
+                        Povežite čitač kartica za računar.
+                    </li>
+                    <li>
+                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
+                        pročitati,
+                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
+                        aplikacije.
+
+                        <figure>
+                            <img src="./img/vc.png">
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="read-mc-linux">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Linux-u</a>.
+                    </li>
+                </ol>
+            </section>
+            <section class="usage">
+                <header>Upotreba</header>
+                <ol start="2">
+                    <li>
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
                         Povežite čitač kartica za računar i ubacite zdravstvenu knjižicu u čitač. Dokument će se
@@ -791,7 +685,8 @@
                         </figure>
                     </li>
                     <li>
-                        Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica
+                        Pre generisanja PDF dokumenta, klikom na dugme <em>Ažuriraj</em> možete preuzeti podatak do kada
+                        je kartica
                         overena.
                         Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
                         kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
@@ -801,57 +696,56 @@
             </section>
         </article>
 
-        <article id="read-mc-linux-arch">
-            <section class="installation">
-                <header>Instalacija</header>
+
+        <article id="change-pin-linux">
+            <section class="prerequisites">
+                <header>Preduslovi</header>
                 <ol>
                     <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                        Da biste mogli da promenite PIN morate znati postojeći PIN. PIN za ličnu kartu se dobija
+                        prilikom izdavanja lične karte u propratnoj dokumentaciji.
                     </li>
+                    <li>Unošenjem pogrešnog PIN-a tri puta za redom kartica će biti blokirana. Samo MUP može da
+                        odblokira
+                        karticu. Proces deblokade je besplatan.</li>
+                </ol>
+            </section>
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol start="3">
                     <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Instalirajte Baš Čelik iz AUR repozitorijuma <a
-                            href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
-                        Alternativno, preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Linux-u</a>.
                     </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
                 <ol start="4">
+                    <li>Povežite čitač kartica za računar.</li>
                     <li>
-                        Pokrenite instalirani program kroz novi terminal:
-                        <pre>bas-celik</pre>
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite zdravstvenu knjižicu u čitač. Dokument će se
-                        pročitati,
-                        nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
-                        aplikacije.
+                        Pokrenite Baš Čelik program, a zatim ubacite ličnu kartu u
+                        čitač. Nakon što se dokument pročita,
+                        kliknite na dugme <em>Kriptografski elementi</em> ispod portreta.
 
                         <figure>
-                            <img src="./img/mc.png">
+                            <img src="./img/id.png">
                         </figure>
                     </li>
+
                     <li>
-                        Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica
-                        overena.
-                        Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
-                        kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
-                        automatski preuzima pri čitanju dokumenta.
+                        Na novom prikazu, kliknite na dugme <em>Promeni PIN</em> u donjem desnom uglu. U formu unesite
+                        postojeći i novi pin i kliknite na <em>Promeni</em>.
+
+                        <figure>
+                            <img src="./img/change-pin.png">
+                        </figure>
                     </li>
                 </ol>
             </section>
         </article>
 
-        <article id="login-euprava-firefox-linux-debian">
+        <article id="login-euprava-firefox-linux">
             <section class="prerequisites">
                 <header>Preduslovi</header>
                 <ol>
@@ -868,10 +762,17 @@
             </section>
             <section class="installation">
                 <header>Instalacija</header>
-                <ol start="2">
+                <ol start="3">
                     <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                        Instalirajte drajvere za pametne kartice za vašu distribuciju.
+                        <ul>
+                            <li>Na Debian sistemima:
+                                <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                            </li>
+                            <li>Na Arch sistemima:
+                                <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         Omogućite PCSC servis tako što ćete u terminalu pokrenuti
@@ -923,7 +824,7 @@
             </section>
         </article>
 
-        <article id="login-euprava-firefox-linux-arch">
+        <article id="login-euprava-chrome-linux">
             <section class="prerequisites">
                 <header>Preduslovi</header>
                 <ol>
@@ -940,82 +841,17 @@
             </section>
             <section class="installation">
                 <header>Instalacija</header>
-                <ol start="2">
+                <ol start="3">
                     <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Preuzmite modul srb-id-pkcs11 za Linux sa <a
-                            href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na trajnoj
-                        lokaciji.
-                    </li>
-                    <li>
-                        U Firefox programu otvorite podešavanja. U meniju sa leve strane odaberite <em>Privacy &
-                            Security</em>, i nađite sekciju <em>Security</em>. Otvorite <em>Security devices...</em>. U
-                        dobijenom pregledu kliknite na <em>Load</em> i zatim postavite putanju do modula srb-id-pkcs11
-                        koji
-                        ste sačuvali. Potvrdite izbor i izađite iz podešavanja. Restartujte Firefox.
-
-                        <figure>
-                            <img src="./img/firefox-device-manager.png">
-                        </figure>
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="6">
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
-                    </li>
-                    <li>
-                        U Firefox-u, otvorite <a href="https://euprava.gov.rs/">euprava.gov.rs</a>. Iz menija sa gornje
-                        desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>.
-
-                        <figure>
-                            <img src="./img/euprava.png">
-                        </figure>
-
-                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos PIN-a.
-                        Nakon
-                        što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite sertifikat označen
-                        sa
-                        <em>Auth</em>. Nakon izbora sertifikata, posle par sekundi otvoriće vam se portal.
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="login-euprava-chrome-linux-debian">
-            <section class="prerequisites">
-                <header>Preduslovi</header>
-                <ol>
-                    <li>
-                        Da biste mogli da se ulogujete u eUpravu sa ličnom kartom, potrebno je da posedujete
-                        kvalifikovani
-                        elektronski sertifikat. Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
-                        MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
-                            href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>.
-                    </li>
-                    <li>Uz sertifikat se dobija PIN (četvorocifreni broj). Ovaj PIN morate znati da biste
-                        koristili sertifikat.</li>
-                </ol>
-            </section>
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol start="2">
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                        Instalirajte drajvere za pametne kartice za vašu distribuciju.
+                        <ul>
+                            <li>Na Debian sistemima:
+                                <pre>sudo apt install pcscd pcsc-tools opensc libccid</pre>
+                            </li>
+                            <li>Na Arch sistemima:
+                                <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         Omogućite PCSC servis tako što ćete u terminalu pokrenuti
@@ -1062,75 +898,7 @@
             </section>
         </article>
 
-        <article id="login-euprava-chrome-linux-arch">
-            <section class="prerequisites">
-                <header>Preduslovi</header>
-                <ol>
-                    <li>
-                        Da biste mogli da se ulogujete u eUpravu sa ličnom kartom, potrebno je da posedujete
-                        kvalifikovani
-                        elektronski sertifikat. Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
-                        MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
-                            href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>.
-                    </li>
-                    <li>Uz sertifikat se dobija PIN (četvorocifreni broj). Ovaj PIN morate znati da biste
-                        koristili sertifikat.</li>
-                </ol>
-            </section>
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol start="2">
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Preuzmite modul srb-id-pkcs11 za Linux sa <a
-                            href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na trajnoj
-                        lokaciji.
-                    </li>
-                    <li>
-                        Dodajte putanju do modula u NSS bazu kroz terminal:
-                        <pre>modutil -dbdir sql:.pki/nssdb/ -add "Srb Id PKCS11" -libfile PUTANJA_DO_MODULA</pre>
-                        Kao argument za <em>dbdir</em> navodite putanju do NSS baze. Najčešće, ta baza je locirana u
-                        <em>$HOME/.pki</em> direktorijumu. Nemojte koristiti tildu (~) u putanji. U komandi, zamenite
-                        <em>PUTANJA_DO_MODULA</em> sa apsolutnom putanjom do modula koji ste sačuvali.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="6">
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
-                    </li>
-                    <li>
-                        U Chrome-u, otvorite <a href="https://euprava.gov.rs/">euprava.gov.rs</a>. Iz menija sa gornje
-                        desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Kvalifikovani elektronski
-                            sertifikat</em>.
-
-                        <figure>
-                            <img src="./img/euprava.png">
-                        </figure>
-
-                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos PIN-a.
-                        Nakon
-                        što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite sertifikat označen
-                        sa
-                        <em>Auth</em>. Nakon izbora sertifikata, posle par sekundi otvoriće vam se portal.
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="login-eporezi-linux-debian">
+        <article id="login-eporezi-linux">
             <section class="prerequisites">
                 <header>Preduslovi</header>
                 <ol>
@@ -1151,18 +919,8 @@
                 <header>Instalacija</header>
                 <ol start="3">
                     <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>Preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice.
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Linux-u</a>.
                     </li>
                     <li>
                         Preuzimanje PKCS#11 modula:
@@ -1195,7 +953,7 @@
                         koristite nije na listi, vratite se na prethodni korak.
 
                         <figure>
-                            <img src="./img/smartbox.png" style="max-width: 500px;">
+                            <img src="./img/smartbox.png">
                         </figure>
                     </li>
                     <li>
@@ -1226,107 +984,7 @@
             </section>
         </article>
 
-        <article id="login-eporezi-linux-arch">
-            <section class="prerequisites">
-                <header>Preduslovi</header>
-                <ol>
-                    <li>
-                        Da biste mogli da se ulogujete na ePoreze, potrebno je da posedujete
-                        kvalifikovani elektronski sertifikat koji je izdao jedno od sertifikacionih tela: Ministarstvo
-                        unutrašnjih poslova, Privredna komora Srbije, Pošta, Halcom ili E-Smart Systems. Halcom
-                        sertifikati ne podržavaju Linux sisteme.
-                        Kvalifikovani elektronski sertifikat se može besplatno dobiti u lokalnom
-                        MUP-u podnošenjem zahteva. Kompletan proces je opisan na <a
-                            href="https://ca.mup.gov.rs/ca/ca_cyr/start/kes/">sajtu MUP-a</a>.
-                    </li>
-                    <li>Uz svaki sertifikat se dobija PIN (najčešće četvorocifreni broj). Ovaj PIN morate znati da biste
-                        koristili
-                        sertifikat.</li>
-                </ol>
-            </section>
-            <section class="installation">
-                <header>Instalacija</header>
-                <ol start="3">
-                    <li>
-                        Instalirajte drajvere za pametne kartice pomoću komande
-                        <pre>sudo pacman -S pcscd pcsc-tools opensc libccid</pre>
-                    </li>
-                    <li>
-                        Omogućite PCSC servis tako što ćete u terminalu pokrenuti
-                        <pre>sudo systemctl enable pcscd.socket</pre>
-                        a zatim
-                        <pre>sudo systemctl start pcscd.socket</pre>
-                    </li>
-                    <li>
-                        Instalirajte Baš Čelik iz AUR repozitorijuma <a
-                            href="https://aur.archlinux.org/packages/bas-celik-bin">bas-celik-bin</a>.
-                        Alternativno, preuzmite Baš Čelik za Linux sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a> stranice.
-                    </li>
-                    <li>
-                        Preuzimanje PKCS#11 modula:
-                        <ul>
-                            <li>
-                                Ako koristite sertifikat koji je izdao MUP, tj. ako koristite ličnu kartu,
-                                preuzmite modul srb-id-pkcs11 za Linux sa <a
-                                    href="https://github.com/ubavic/srb-id-pkcs11/releases/latest">Releases</a>
-                                stranice. Preuzetu datoteku sačuvajte na
-                                trajnoj lokaciji.
-                            </li>
-                            <li>Ako koristite sertifikat koji su izdali Pošta, Halcom
-                                ili E-Smart Systems, pročitajte tehničku dokumentaciju tih sertifikacionih tela da bi
-                                ste se informisali kako da instalirate PKCS#11 modul.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Otvorite Baš Čelik. U desnom gornjem uglu Baš čelika prozora, kliknite na dugme za podešavanja.
-                        U podešavanjima, otvorite sekciju <em>Smartbox</em>. Kliknite na <em>Omogući SmartBox</em>. Za
-                        tip sertifikata koji ćete koristiti, popunite putanju do PKCS#11 modula. Neke od putanja se
-                        automatski popunjavaju. Ako te vrste sertifikata ne koristite, putanje obrišite.
-                    </li>
-                </ol>
-            </section>
-            <section class="usage">
-                <header>Upotreba</header>
-                <ol start="6">
-                    <li>
-                        Otvorite Baš Čelik. Prikazaće se lista učitanih PKCS#11 modula. Ako modul koji želite da
-                        koristite nije na listi, vratite se na prethodni korak.
-
-                        <figure>
-                            <img src="./img/smartbox.png" style="max-width: 500px;">
-                        </figure>
-                    </li>
-                    <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač.
-                    </li>
-                    <li>
-                        U pretraživaču otvorite <a
-                            href="https://eporezi.purs.gov.rs/user/login.html">eporezi.purs.gov.rs</a>. Iz menija sa
-                        gornje desne strane otvorite stranicu za prijavu. Odaberite opciju <em>Pristup putem
-                            Kvalifikovanog elektronskog
-                            sertifikata (Smartbox)</em>.
-
-                        <figure>
-                            <img src="./img/ePorezi-login.png">
-                        </figure>
-
-                        Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
-                        PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
-                        sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
-                    </li>
-                    <li>
-                        Baš Čelik radi u Smartbox ili eDocuments režimu. Ako želite da očitate elektronska
-                        dokumenta (lična karta, zdravstvena knjižica, vozačka dozvola), kroz podešavanja Baš Čelika
-                        isključite SmartBox mod i restartujte aplikaciju. Kada ponovo budete učitavali Smartbox
-                        mod, dovoljno je samo da ga aktivirate na istom mestu, sva ostala podešavanja (putanje
-                        do modula) biće sačuvana.
-                    </li>
-                </ol>
-            </section>
-        </article>
-
-        <article id="read-id-windows">
+        <article id="install-bas-celik-windows">
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
@@ -1336,17 +994,31 @@
                         stranice. Preuzetu datoteku sačuvajte na dostupnom
                         mestu (npr. na Desktopu).
                     </li>
+                    <li>Pokrenite datoteku. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
+                        kliknite na <em>Run anyway</em>.</li>
+                    <li>Baš Čelik je sada instaliran i spreman za korišćenje.</li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="read-id-windows">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Windows-u</a>.
+                    </li>
                 </ol>
             </section>
             <section class="usage">
                 <header>Upotreba</header>
                 <ol start="2">
                     <li>
-                        Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
-                        kliknite na <em>Run anyway</em>.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
+                        Pokrenite Baš Čelik program a zatim ubacite ličnu kartu u čitač. Dokument će se pročitati, nakon
                         čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične aplikacije.
 
                         <figure>
@@ -1362,10 +1034,8 @@
                 <header>Instalacija</header>
                 <ol>
                     <li>
-                        Preuzmite Baš Čelik za Windows sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na dostupnom
-                        mestu (npr. na Desktopu).
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Windows-u</a>.
                     </li>
                 </ol>
             </section>
@@ -1373,11 +1043,10 @@
                 <header>Upotreba</header>
                 <ol start="2">
                     <li>
-                        Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
-                        kliknite na <em>Run anyway</em>.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite saobraćajnu dozvolu u čitač. Dokument će se
+                        Pokrenite Baš Čelik program a zatim ubacite saobraćajnu dozvolu u čitač. Dokument će se
                         pročitati,
                         nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
                         aplikacije.
@@ -1394,10 +1063,9 @@
             <section class="installation">
                 <header>Instalacija</header>
                 <ol>
-                    <li>Preuzmite Baš Čelik za Windows sa <a
-                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
-                        stranice. Preuzetu datoteku sačuvajte na dostupnom
-                        mestu (npr. na Desktopu).
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Windows-u</a>.
                     </li>
                 </ol>
             </section>
@@ -1405,11 +1073,10 @@
                 <header>Upotreba</header>
                 <ol start="2">
                     <li>
-                        Pokrenite Baš Čelik program. Ukoliko se pojavi poruka <em>Windows Defender</em> programa,
-                        kliknite na <em>Run anyway</em>.
+                        Povežite čitač kartica za računar.
                     </li>
                     <li>
-                        Povežite čitač kartica za računar i ubacite zdravstvenu knjižicu u čitač. Dokument će se
+                        Pokrenite Baš Čelik program a zatim ubacite zdravstvenu knjižicu u čitač. Dokument će se
                         pročitati,
                         nakon čega klikom na dugme možete sačuvati PDF koji izgleda kao PDF dobijen iz zvanične
                         aplikacije.
@@ -1419,11 +1086,60 @@
                         </figure>
                     </li>
                     <li>
-                        Pre generisanja PDF dokumenta, klikom na dugme možete preuzeti podatak do kada je kartica
+                        Pre generisanja PDF dokumenta, klikom na dugme <em>Ažuriraj</em> možete preuzeti podatak do kada
+                        je kartica
                         overena.
                         Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
                         kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
                         automatski preuzima pri čitanju dokumenta.
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="change-pin-windows">
+            <section class="prerequisites">
+                <header>Preduslovi</header>
+                <ol>
+                    <li>
+                        Da biste mogli da promenite PIN morate znati postojeći PIN. PIN za ličnu kartu se dobija
+                        prilikom izdavanja lične karte u propratnoj dokumentaciji.
+                    </li>
+                    <li>Unošenjem pogrešnog PIN-a tri puta za redom kartica će biti blokirana. Samo MUP može da
+                        odblokira
+                        karticu. Proces deblokade je besplatan.</li>
+                </ol>
+            </section>
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol start="3">
+                    <li>
+                        Instalirajte Baš Čelik prateći
+                        <a href="#" onclick="switchUsage('install-bas-celik')">uputstvo za instalaciju na Windows-u</a>.
+                    </li>
+                </ol>
+            </section>
+            <section class="usage">
+                <header>Upotreba</header>
+                <ol start="4">
+                    <li>Povežite čitač kartica za računar.</li>
+                    <li>
+                        Pokrenite Baš Čelik program, a zatim ubacite ličnu kartu u
+                        čitač. Nakon što se dokument pročita,
+                        kliknite na dugme <em>Kriptografski elementi</em> ispod portreta.
+
+                        <figure>
+                            <img src="./img/id.png">
+                        </figure>
+                    </li>
+
+                    <li>
+                        Na novom prikazu, kliknite na dugme <em>Promeni PIN</em> u donjem desnom uglu. U formu unesite
+                        postojeći i novi pin i kliknite na <em>Promeni</em>.
+
+                        <figure>
+                            <img src="./img/change-pin.png">
+                        </figure>
                     </li>
                 </ol>
             </section>
@@ -1511,12 +1227,20 @@
     window.onload = () => {
         const params = new URLSearchParams(window.location.search);
         let os = params.get("os");
+
         if (os == "mac-arm" || os == "mac-intel") {
             os = "mac"
+        } else if (os == "linux-arch" || os == "linux-debian") {
+            os = "linux"
         }
 
         setSelectValue("usage", params.get("usage"));
         setSelectValue("os", os);
+        onChange();
+    }
+
+    const switchUsage = (newUsage) => {
+        setSelectValue("usage", newUsage);
         onChange();
     }
 </script>
