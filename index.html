@@ -1464,7 +1464,7 @@
     window.onload = () => {
         const params = new URLSearchParams(window.location.search);
         let os = params.get("os");
-        if (os == "mac-arm" || "mac-intel") {
+        if (os == "mac-arm" || os == "mac-intel") {
             os = "mac"
         }
 
