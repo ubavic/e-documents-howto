@@ -126,7 +126,7 @@
             text-align: center;
         }
 
-        figure{
+        figure {
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
@@ -135,7 +135,7 @@
             margin: 0;
         }
 
-        li > figure:last-child {
+        li>figure:last-child {
             margin-bottom: 0;
         }
 
@@ -188,6 +188,7 @@
                 <option value="read-id" selected="selected">očitam ličnu kartu</option>
                 <option value="read-vc">očitam saobraćajnu dozvolu</option>
                 <option value="read-mc">očitam zdravstvenu knjižicu</option>
+                <option value="change-pin">promenim PIN na ličnoj karti</option>
                 <option value="login-euprava-firefox">se ulogujem na eUpravu koristeći Firefox</option>
                 <option value="login-euprava-chrome">se ulogujem na eUpravu koristeći Chrome</option>
                 <option value="login-eporezi">se ulogujem na ePoreze</option>
@@ -348,6 +349,52 @@
                         Ako ne želite svaki put da aktivirate ovo dugme pri čitanju zdravstvene knjižice,
                         kroz podešavanja programa (gornji desni ugao aplikacije), možete podesiti da se datum overe
                         automatski preuzima pri čitanju dokumenta.
+                    </li>
+                </ol>
+            </section>
+        </article>
+
+        <article id="change-pin-mac">
+            <section class="installation">
+                <header>Instalacija</header>
+                <ol>
+                    <li>
+                        Preuzmite Baš Čelik za macOS sa <a
+                            href="https://github.com/ubavic/bas-celik/releases/latest">Releases</a>
+                        stranice. Posebne verzije postoje za ARM i Intel sisteme. Preuzetu datoteku sačuvajte na
+                        desktopu.
+                    </li>
+                    <li>
+                        Pokrenite preuzeti program klikom na ikonicu. Pojaviće se upozorenje da program nije
+                        verifikovan.
+
+                        <figure>
+                            <img src="./img/macOS-error.png" style="max-height: 300px;">
+                        </figure>
+
+                        Zatvorite upozorenje i otvorite <em>System Settings</em>. U sekciji <em>Privacy & Security</em>
+                        otvorite <em>Security</em>. Kliknite na <em>Open Anyway</em> koje se nalazi
+                        kod imena Baš Čelik programa.
+
+                        <figure>
+                            <img src="./img/macOS-privacy-and-security.png">
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+            <section class="usage">
+                <header>Upotreba</header>
+                <ol start="3">
+                    <li>
+                        Pokrenite Baš Čelik program. Povežite čitač kartica za računar i ubacite ličnu kartu u
+                        čitač. Nakon što se dokument pročita,
+                        kliknite na dugme <em>Kriptografski elementi</em> ispod portreta.
+
+                        Na novom prikazu, kliknite na dugme <em>Promeni PIN</em> u donjem desnom uglu. U formu unesite postojeći i novi pin i kliknite na <em>Promeni</em>.
+
+                        <figure>
+                            <img src="./img/change-pin.png" style="max-height: 300px;">
+                        </figure>
                     </li>
                 </ol>
             </section>
@@ -1263,7 +1310,7 @@
                         <figure>
                             <img src="./img/ePorezi-login.png">
                         </figure>
-                       
+
                         Kliknite na dugme <em>Prijavite se</em>. Pojaviće se polje za unos
                         PIN-a. Nakon što upišete ispravan PIN, pojaviće se lista sa dva sertifikata, vi odaberite
                         sertifikat označen sa <em>Sign</em>. Nakon izbora sertifikata, ulogovali ste se u portal.
